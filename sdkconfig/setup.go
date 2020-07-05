@@ -37,3 +37,6 @@ func (setup *FabricSetup) Initialize() error {
 	setup.initialized = true
 	return nil
 }
+func (setup *FabricSetup) CloseSDK() {
+	setup.sdk.Close()
+}
